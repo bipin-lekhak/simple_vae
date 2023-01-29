@@ -9,8 +9,9 @@ from torchvision import transforms
 from torchvision.datasets import MNIST, FashionMNIST, CIFAR10
 from torch.utils.data import DataLoader
 from torchvision.utils import save_image
-from tsnecuda import TSNE
+#from tsnecuda import TSNE
 import matplotlib as mpl
+from sklearn.manifold import TSNE
 
 from st_out_supress import suppress_stdout_stderr
 
@@ -189,13 +190,13 @@ class VAE(LightningModule):
         train_data = self.dataset(
             "data/", download=True, train=True, transform=self.data_transform
         )
-        return DataLoader(train_data, batch_size=128)
+        return DataLoader(train_data, batch_size=16)
 
     def val_dataloader(self):
         val_data = self.dataset(
             "data/", download=True, train=False, transform=self.data_transform
         )
-        return DataLoader(val_data, batch_size=64)
+        return DataLoader(val_data, batch_size=16)
 
     @staticmethod
     def scale_image(img):
@@ -216,9 +217,10 @@ class VAE(LightningModule):
         plt.close()
 
     def get_latent_image(self, output_latent, y=None):
-        with suppress_stdout_stderr() as _:
+        #with suppress_stdout_stderr() as _:
             # with contextlib.redirect_stderr(os.devnull) as _:
-            latent_tsne = self.tsne.fit_transform(output_latent.cpu())
+        #    latent_tsne = self.tsne.fit_transform(output_latent.cpu())
+        latent_tsne = self.tsne.fit_transform(output_latent.cpu())
 
         fig, ax = plt.subplots()
         cmap = plt.cm.tab20b
@@ -233,5 +235,5 @@ class VAE(LightningModule):
 
 
 if __name__ == "__main__":
-    trainer = Trainer(accelerator="gpu", devices=1, auto_lr_find=True)
+    trainer = Trainer(accelerator="mps", devices=1, auto_lr_find=False)
     trainer.fit(VAE(beta=1.2))
