@@ -137,7 +137,7 @@ tqdm==4.64.1
 traitlets==5.4.0
 #tsnecuda==3.0.1+cu112
 typing_extensions==4.3.0
-urllib3==1.26.12
+urllib3==1.26.18
 wcwidth==0.2.5
 webencodings==0.5.1
 websocket-client==1.4.1
