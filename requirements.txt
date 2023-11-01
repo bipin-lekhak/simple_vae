@@ -132,7 +132,7 @@ torch-tb-profiler==0.4.0
 torchaudio==0.12.1
 torchmetrics==0.10.0
 torchvision==0.13.1
-tornado==6.2
+tornado==6.3.3
 tqdm==4.64.1
 traitlets==5.4.0
 #tsnecuda==3.0.1+cu112
@@ -141,6 +141,6 @@ urllib3==1.26.12
 wcwidth==0.2.5
 webencodings==0.5.1
 websocket-client==1.4.1
-Werkzeug==2.2.2
+Werkzeug==3.0.1
 widgetsnbextension==4.0.3
 yarl==1.8.1
