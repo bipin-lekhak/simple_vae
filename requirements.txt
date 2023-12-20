@@ -35,7 +35,7 @@ grpcio==1.49.1
 idna==3.4
 imageio==2.22.0
 ipykernel==6.16.0
-ipython==8.5.0
+ipython==8.10.0
 ipython-genutils==0.2.0
 ipywidgets==8.0.2
 isort==5.10.1
@@ -46,7 +46,7 @@ json5==0.9.10
 jsonschema==4.16.0
 jupyter==1.0.0
 jupyter-console==6.4.4
-jupyter-core==4.11.1
+jupyter-core==4.11.2
 jupyter-server==1.19.1
 jupyter_client==7.3.5
 jupyterlab==3.4.7
@@ -96,7 +96,7 @@ pycodestyle==2.9.1
 pycparser==2.21
 pyDeprecate==0.3.2
 pyflakes==2.5.0
-Pygments==2.13.0
+Pygments==2.15.0
 pyparsing==3.0.9
 pyrsistent==0.18.1
 python-dateutil==2.8.2
@@ -132,7 +132,7 @@ torch-tb-profiler==0.4.0
 torchaudio==0.12.1
 torchmetrics==0.10.0
 torchvision==0.13.1
-tornado==6.2
+tornado==6.3.3
 tqdm==4.64.1
 traitlets==5.4.0
 #tsnecuda==3.0.1+cu112
@@ -144,3 +144,4 @@ websocket-client==1.4.1
 Werkzeug==2.2.2
 widgetsnbextension==4.0.3
 yarl==1.8.1
+setuptools>=65.5.1 # not directly required, pinned by Snyk to avoid a vulnerability
