@@ -1,5 +1,5 @@
 absl-py==1.2.0
-aiohttp==3.8.3
+aiohttp==3.9.4
 aiosignal==1.2.0
 anyio==3.6.1
 argon2-cffi==21.3.0
@@ -127,7 +127,7 @@ threadpoolctl==3.1.0
 tifffile==2022.8.12
 tinycss2==1.1.1
 tomli==2.0.1
-torch==1.12.1
+torch==2.2.0
 torch-tb-profiler==0.4.0
 torchaudio==0.12.1
 torchmetrics==0.10.0
